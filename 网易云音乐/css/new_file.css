@@ -1,0 +1,104 @@
+/*通配符*/
+*{
+	margin: 0;
+	padding:0;
+}
+input{
+	border: none;
+	outline: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li{
+	list-style: none;
+}
+.box{
+	width: 100%;
+	height: 70px;
+	background: #242424;
+}
+.head{
+	margin: 0 auto;
+	width: 1100px;
+	height: 70px;
+}
+.left{
+	float: left;
+	width: 176px;
+	height: 69px;
+	background: url(../img/topbar.png) no-repeat;
+	background-position: 0px 0px;
+}
+.center{
+	float: left;
+}
+.center ul li a{
+	padding: 0 19px;
+	color: white;
+	font-size: 14px;
+	line-height: 70px;
+}
+.center ul li:hover{
+	background: black;
+}
+.center ul li:nth-child(1){
+	background: black;
+}
+.center ul li:nth-child(6){
+	position: relative;
+}
+.center ul li{
+	height: 70px;
+	float: left;
+}
+.img{
+	position: absolute;
+	right: -21px;
+    top: 19px;
+	display: block;
+	width: 28px;
+	height: 19px;
+	background: url(../img/topbar.png) no-repeat;
+	background-position: -191px 4px;
+}
+.right{
+	margin-left: 30px;
+	float: left;
+}
+.scrh{
+	float: left;
+	position: relative;
+	width: 158px;
+	height: 32px;
+	background: white;
+	border-radius: 20px;
+}
+.fdj{
+	position: absolute;
+    left: 8px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/topbar.png) no-repeat;
+    background-position: -6px -104px;
+}
+.scrh1{
+	position: absolute;
+	left: 28px;
+	top:9px;
+	width: 115px;
+	height: 15px;
+}
+.right-center{
+	float: left;
+    width: 90px;
+    height: 32px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    line-height: 32px;
+    text-align: center;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*当设置定位的时候   
+			  父级相对定位 position: relative;
+					
+			  子级绝对定位 position: absolute;
+			 * 
+			 * */
+			
+			*{
+				/*因为浏览器内核不同 所造成的标签
+				  之间的差异  所以要初始化标签
+				 * */
+				/*margin 是外边距*/
+				margin: 0;
+				/*padding 是内边距（内填充）*/
+				padding: 0;
+			}
+			/*清除li的默认样式*/
+			li{
+				list-style: none;
+			}
+			/*清除a标签的默认样式*/
+			a{
+				/*清除a标签的下划线*/
+				text-decoration: none;
+				color: black;
+			}
+			.wrap{
+				width: 100%;
+				background: #242424;
+				height: 70px;
+			}
+			
+			.box{
+				width: 1100px;
+				height: 70px;
+
+				/*让盒子居中 上下边距为0 左右自适应*/
+				margin: 0 auto;
+			}
+			.logo{
+				float: left;
+				width: 176px;
+				height: 69px;
+				/*导入图片（url 来自哪里 来自img下面的topbar）      并且让图片不重复（no-repeat）*/
+				background: url(img/topbar.png) no-repeat;
+				/*图片定位*/
+				background-position: 0px 0px;
+			}
+			.box-list{
+				float: left;
+			}
+			/*让box-list 下面的 ul li 浮动*/
+			.box-list ul li{
+				/*浮动 left左浮动 right右浮动
+				 当使用浮动的时候 浮动元素会脱离文档流
+				 * */
+				float: left;
+				height: 70px;
+			}
+			.box-list ul li:nth-child(1){
+				background: black;
+			}
+			.box-list ul li a{
+				color: white;
+				/*内填充 上下为0 左右12px*/
+				padding: 0px 12px ;
+				/*水平居中*/
+				text-align: center;
+				/*垂直居中 行高*/
+				line-height:70px ;
+				/*字体大小*/
+				font-size: 13px;
+			}
+			.box-list ul li:nth-child(6){
+				/*给父级设置相对定位*/
+				position: relative;
+			}
+			span{
+				/*设置绝对定位  */
+				position: absolute;
+				right: -34px;
+    			top: 13px;
+				width: 28px;
+				height: 19px;
+				/*把span行内元素 打印成块级元素*/
+				display: block;
+				background: url(img/topbar.png) no-repeat;
+				background-position: -191px 0px;
+			}
+			
+			/*设置hover 效果*/
+			.box-list ul li:hover{
+				background: black;
+			}
+			.box-login{
+				margin-top: 20px;
+				float: right;
+			}
+			/*设置input*/
+			.inpu{
+				position: relative;
+				width: 160px;
+				height: 32px;
+				background: white;
+				/*给inpu盒子 磨圆*/
+				border-radius: 20px;
+				float: left;
+			}
+			.input{
+				/*让input框的边框隐藏*/
+				border: none;
+				/*让input框的轮廓隐藏*/
+				outline: none;
+				width: 115px;
+				height: 16px;
+				margin-left: 29px;
+    			margin-top: 7px;
+			}
+			.fdj{
+				width: 16px;
+				height: 16px;
+				background: url(img/topbar.png) no-repeat;
+				background-position: -9px -106px;
+			    position: absolute;
+			    left: 15px;
+			    top: 6px;
+			}
+			.zuozhe{
+				margin-left: 20px;
+				font-size: 13px;
+				text-align: center;
+				color: white;
+				float: left;
+				width: 90px;
+				height: 32px;
+				border: 1px solid white;
+				border-radius: 20px;
+				line-height: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<div class="logo">
+					
+				</div>
+				<div class="box-list">
+					<ul>
+						<li><a href="javascript:;">发现音乐</a></li>
+						<li><a href="javascript:;">我的音乐</a> </li>
+						<li><a href="javascript:;">朋友</a></li>
+						<li><a href="javascript:;">商城</a></li>
+						<li><a href="javascript:;">音乐人</a></li>
+						<li><a href="javascript:;">下载客户端</a>
+							<span></span>
+							
+						</li>
+						
+					</ul>
+				</div>
+				<div class="box-login">
+					<div class="inpu">
+						<input type="text" class="input" />
+						<div class="fdj"></div>
+						
+					</div>
+					<div class="zuozhe">创作者中心</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
